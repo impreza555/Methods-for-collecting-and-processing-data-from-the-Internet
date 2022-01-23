@@ -21,7 +21,7 @@ def parser(keyword):
     dom = BeautifulSoup(response.text, 'html.parser')
     last_pg = int(dom.find('a', {'data-qa': 'pager-next'}).previous_sibling.find('a', {'class': 'bloko-button'}).find(
         'span').getText())
-    for pg in range(0, last_pg):
+    for pg in range(0, last_pg + 1):
         params['page'] = str(pg)
         response = requests.get(url + '/search/vacancy', params=params, headers=headers)
         dom = BeautifulSoup(response.text, 'html.parser')
