@@ -12,6 +12,7 @@ def parser(keyword):
         'search_field': ['name', 'company_name', 'description'],
         'text': keyword,
         'page': '0',
+        'items_on_page': '20'
     }
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
