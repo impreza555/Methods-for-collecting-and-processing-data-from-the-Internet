@@ -52,12 +52,12 @@ def parser(keyword):
                 salary_min = int(salary[0])
                 salary_max = int(salary[1])
                 currency_of_salary = salary[2]
-            vacancy_dict['название_вакансии'] = vacancy_title
-            vacancy_dict['ссылка_на_вакансию'] = vacancy_link
-            vacancy_dict['мин_зарплата'] = salary_min
-            vacancy_dict['макс_зарплата'] = salary_max
-            vacancy_dict['валюта_зарплаты'] = currency_of_salary
-            vacancy_dict['сайт_поиска'] = url
+            vacancy_dict['vacancy_title'] = vacancy_title
+            vacancy_dict['vacancy_link'] = vacancy_link
+            vacancy_dict['salary_min'] = salary_min
+            vacancy_dict['salary_max'] = salary_max
+            vacancy_dict['currency_of_salary'] = currency_of_salary
+            vacancy_dict['search_site'] = url
             vacancy_list.append(vacancy_dict)
     with open('HH_vacancy.csv', 'w', encoding='utf-8') as f:
         writer = csv.DictWriter(
@@ -69,5 +69,4 @@ def parser(keyword):
 
 if __name__ == "__main__":
     text = input('Введите название профессии: ')
-    # text = 'python django'
     parser(text)
