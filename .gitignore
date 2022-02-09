@@ -1,2 +1,4 @@
 .idea/
 venv/
+books/__pycache__/
+books/spiders/__pycache__/
