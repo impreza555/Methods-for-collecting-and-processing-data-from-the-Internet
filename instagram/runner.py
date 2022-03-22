@@ -10,5 +10,5 @@ if __name__ == '__main__':
     process = CrawlerProcess(settings=crawler_settings)
     # users_list = input('Введите имена пользователей через запятую: ').split(',')
     # process.crawl(InstaParseSpider, users_list)
-    process.crawl(InstaParseSpider, users_list=['metallica', 'ironmaiden'])  # у Металлики и Иронмейден очень много подписчиков. Лучше своих указать.)
+    process.crawl(InstaParseSpider, users_list=['metallica', 'ironmaiden'])  # у Металлики и Айронмейден очень много подписчиков. Лучше своих указать.)
     process.start()
