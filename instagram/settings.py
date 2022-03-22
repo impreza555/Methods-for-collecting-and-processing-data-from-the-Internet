@@ -14,12 +14,13 @@ NEWSPIDER_MODULE = 'instagram.spiders'
 
 LOG_ENABLED = True
 LOG_LEVEL = 'DEBUG'
-# LOG_FILE = 'log.txt'
+LOG_FILE = 'log.txt'
 
 IMAGES_STORE = 'images'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
+# USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36 OPR/84.0.4316.42'
 USER_AGENT = 'Instagram 155.0.0.37.107'
 
 # Obey robots.txt rules
@@ -69,7 +70,8 @@ COOKIES_ENABLED = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'instagram.pipelines.InstagramPipeline': 300,
+   'instagram.pipelines.DataBasePipeline': 300,
+   'instagram.pipelines.InstagramImagesPipeline': 200
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
